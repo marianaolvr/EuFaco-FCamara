@@ -1,5 +1,7 @@
 const knex = require('knex');
 
+const MONGO_URL = process.env.MONGODB_URI
+
 const connection = knex({
   client: 'sqlite3',
   connection: {

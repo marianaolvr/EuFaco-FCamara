@@ -2,6 +2,7 @@
   "name": "front-end",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -9,8 +10,16 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
+
   "private": true,
   "dependencies": {
+    "@angular/cli": "^10.0.2",
+    "@angular/compiler-cli": "~7.2.0",
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
@@ -29,16 +38,17 @@
     "rxjs-compat": "^6.5.5",
     "socket.io-client": "^2.3.0",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "typescript": "~3.2.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",
-    "@angular/cli": "~7.3.9",
+    "@angular/cli": "^10.0.2",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
