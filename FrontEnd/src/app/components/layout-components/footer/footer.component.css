@@ -1,0 +1,13 @@
+.footer-backgound {
+  background-color: #FAFAFA;
+  padding: 5% 5%;
+}
+
+.footer p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.2px;
+}

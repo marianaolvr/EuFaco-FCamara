@@ -1,0 +1,108 @@
+.btn-contactar {
+  background-color: #305E92 ;
+  border-radius: 43px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  padding: 0.5% 3%;
+}
+
+label {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+.labelFirstQuestion{
+  text-align: center;
+}
+
+.modal-body {
+  justify-content: center;
+}
+
+.btn-back{
+  text-decoration: underline;
+  background-color: none;
+  color: #FC4638;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+}
+
+.btn-next{
+  background-color: #FC4638;
+  border-radius: 40px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+legend {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+  padding-left: 5%;
+}
+
+.register-form label {
+  font-weight: bold;
+}
+
+.register-title {
+  text-align: center;
+  margin: 0%;
+  padding-bottom: 5%;
+}
+
+
+.progress-bar {
+  background-color: #FC4638;
+}
+
+
+.progress {
+  margin-bottom: 7%;
+}
+
+
+.registerDone {
+  background-color: #FC4638;
+}
+
+
+.contentReg {
+  justify-content: center;
+  text-align: center;
+}
+
+
+.contentReg h2 {
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+}
+
+
+.contentReg p {
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+}
+
+.btn-done {
+  background-color: white;
+  color: #FC4638;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  border-radius: 40px;
+  padding: 0.5% 4%;
+  margin-top: 10%;
+}
+
+.modal-header {
+  border: none;
+}
+
+.modal-footer {
+  border: none;
+}
+
+.confirmation-msg{
+  margin-bottom: 10%;
+}

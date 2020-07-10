@@ -1,0 +1,48 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <button
+      type="button"
+      class="close"
+      data-dismiss="modal"
+      aria-label="Fechar"
+      (click)="onClose()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div
+    class="modal-body d-flex flex-column align-items-center justify-content-center"
+  >
+    <h2 class="modal-title" id="exampleModalLabel">OPA, CALMA AI!</h2>
+
+    <p style="width: 80%;">
+      Para que possamos encontrar profissionais próximos a você, nos ajude
+      colocando seu CEP ou clicando no ícone para busca de localização
+      automática!
+    </p>
+
+    <div class="form-group d-flex flex-column justify-content-center">
+      <label for="cep">Insira seu CEP</label>
+      <input
+        type="text"
+        class="form-control"
+        name="cep"
+        [(ngModel)]="cep"
+        (click)="getLocation()"
+        required
+        minlength="8"
+      />
+    </div>
+
+    <div class="modal-footer">
+      <button
+        type="submit"
+        class="btn btn-search"
+        data-dismiss="modal"
+        (click)="onClick()"
+      >
+        Buscar
+      </button>
+    </div>
+  </div>
+</div>

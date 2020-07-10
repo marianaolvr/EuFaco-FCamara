@@ -1,0 +1,183 @@
+<div class="body">
+  <!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/login"
+              >ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="right-element p-2">
+        <button type="button" class="btn btn-lg ml-3" id="contractor-btn">
+          <a routerLink="/cadastro">Sou Prestador</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- SECTION 1 - TIPS CARD -->
+  <div class="container section1">
+    <div class="card-inicial mx-auto" style="width: 80%;">
+      <div class="image-card">
+        <img
+          src="/assets/Illustrations/IMAGEM_PERFILPUBLICO.png"
+          alt=""
+          style="width: 100%;"
+        />
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Como contratar?</h4>
+        <p class="card-text">
+          <strong>1-</strong> Descreva suas necessidades ao responder algumas
+          perguntas.
+        </p>
+        <p class="card-text">
+          <strong>2-</strong> O profissional entrará em contato através das
+          Mensagens e te passará o orçamento
+          <strong>para serviço online ou presencial.</strong>
+        </p>
+        <p class="card-text">
+          <strong>3-</strong> Preços, prazos, condições... Obtenha todas as
+          informações necessárias antes de fechar com este profissional.
+        </p>
+        <p class="card-text">
+          <strong>4-</strong> Agende com este profissional de forma segura
+          através da (nome da nossa plataforma)
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 2 -PROFILE-->
+  <div class="container section2">
+    <div class="profile mx-auto" style="width: 80%;">
+      <div class="profile-header d-flex">
+        <div class="image-profile">
+          <img src="/assets/images/PRESTADOR.jpg" alt="" />
+        </div>
+
+        <div class="content">
+          <h5>{{ provider.name }}</h5>
+          <p>Pintor | {{ provider.address }} | {{ provider.service }}</p>
+          <p class="video-available">
+            <i class="fas fa-video"></i> Disponível remotamente
+          </p>
+          <p class="points-avaliation">
+            5.0
+            <i class="fas fa-star fa-sm"></i>
+            <i class="fas fa-star fa-sm"></i>
+            <i class="fas fa-star fa-sm"></i>
+            <i class="fas fa-star fa-sm"></i>
+            <i class="fas fa-star fa-sm"></i>
+          </p>
+        </div>
+      </div>
+
+      <div class="profile-description mt-4 mb-4">
+        <h6>Sobre este profissional</h6>
+        <p>{{ provider.description }}</p>
+      </div>
+
+      <hr />
+
+      <div class="profile-pictures">
+        <h4>FOTOS</h4>
+        <img
+          class="img-fluid"
+          src="/assets/images/public-profile-ex10263.jpg"
+          alt=""
+        />
+        <img
+          class="img-fluid"
+          src="/assets/images/public-profile-ex10707.jpg"
+          alt=""
+        />
+      </div>
+
+      <hr />
+
+      <div class="profile-avaliations">
+        <h4>AVALIAÇÕES</h4>
+        <p>
+          De acordo com as avaliações de nossos clientes, essas são as
+          qualidades deste profissional: capacidade de resposta, pontualidade e
+          profissionalismo.
+        </p>
+        <div class="raiting">
+          <h4 class="points-avaliation-2">5.0</h4>
+          <i class="fas fa-star fa-lg"></i>
+          <i class="fas fa-star fa-lg"></i>
+          <i class="fas fa-star fa-lg"></i>
+          <i class="fas fa-star fa-lg"></i>
+          <i class="fas fa-star fa-lg"></i>
+          <p>1 avaliação</p>
+        </div>
+        <hr />
+        <h6>Giovana. F</h6>
+        <i class="fas fa-star fa-xs"></i>
+        <i class="fas fa-star fa-xs"></i>
+        <i class="fas fa-star fa-xs"></i>
+        <i class="fas fa-star fa-xs"></i>
+        <i class="fas fa-star fa-xs"></i>
+
+        <p>
+          Profissional exemplar, criativo com extremo bom gosto! Além de ser uma
+          pessoa muito educada e prestativa!
+        </p>
+      </div>
+
+      <!-- CONTACT BUTTON -->
+      <div class="btn-contact mb-5 mt-5">
+        <button
+          type="button"
+          class="btn btn-md ml-3 justify-items-right"
+          id="contact-btn"
+          (click)="showPopup()"
+        >
+          <a>Contatar</a>
+        </button>
+      </div>
+    </div>
+
+    <div class="row justify-content-end">
+      <button type="button" class="btn btn-md ml-3" id="help-btn">
+        <a href="">Precisa de ajuda?</a>
+      </button>
+    </div>
+  </div>
+  <app-join-us></app-join-us>
+</div>
+
+<app-footer></app-footer>

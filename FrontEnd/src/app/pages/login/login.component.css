@@ -1,0 +1,215 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 28%, 33%;
+
+  background-position: 0% 3%, top right;
+}
+
+a {
+  font-family: "Titillium Web", sans-serif;
+}
+
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+/* FIM DO NAVBAR */
+
+/* TITLE */
+h1 {
+  font-family: Trebuchet MS;
+  font-weight: bold;
+  color: #305e92;
+}
+
+/* FORM */
+.form-content {
+  margin-top: 5%;
+  margin-bottom: 8%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+form {
+  background-color: white;
+  border: 1px solid #70707054;
+  border-radius: 15px;
+  box-shadow: 0px 6px 6px #00000014;
+  padding: 3%;
+}
+
+/* FORM: BUTTONS */
+.btns-form {
+  margin-bottom: 10%;
+}
+
+.btn-login-cliente,
+.btn-login-prestador {
+  box-shadow: 0px 2px 2px #00000066;
+  border-radius: 43px;
+  color: white;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+.btn-login-cliente {
+  background-color: #305e92;
+  margin-right: 2%;
+}
+
+.btn-login-prestador {
+  background-color: #fc4638;
+  margin-left: 2%;
+}
+
+.btn-login-cliente a,
+.btn-login-prestador a {
+  color: white;
+  white-space: nowrap;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+}
+
+.btns-form {
+  margin-bottom: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  border: 1px solid #70707060;
+  border-radius: 8px;
+}
+
+.btn-entrar {
+  background-color: #fc4638;
+  border-radius: 43px;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+}
+
+/* FORM: ESQUECI MINHA SENHA */
+.forgotpass {
+  align-self: flex-end;
+  margin-bottom: 10%;
+}
+
+.forgotpass a {
+  color: #305e92;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  height: 25vh;
+}
+
+footer p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-size: 335.73px 884.54px, 334.6px 547.28px;
+  }
+
+
+  .form {
+    width: 65vw;
+  }
+
+
+
+  input {
+    height: 5vh;
+  }
+
+
+
+  label {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: bold;
+  }
+
+  .btn-cadastro a {
+    color: #305e92;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+/* FOOTER */
+.section6 {
+  background-color: #fafafa;
+  padding: 5% 5%;
+}
+
+.footer p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+footer {
+  height: 461px;
+}

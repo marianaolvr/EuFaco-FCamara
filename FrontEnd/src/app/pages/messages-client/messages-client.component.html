@@ -1,0 +1,78 @@
+<body>
+  <div id="frame">
+    <div id="sidepanel">
+      <div id="profile">
+        <div class="wrap">
+          <img
+            id="profile-img"
+            src="/../../../assets/images/other_user.png"
+            alt=""
+          />
+          <p>{{ clientName }}</p>
+        </div>
+      </div>
+      <div id="search">
+        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+        <input type="text" placeholder="Search contacts..." />
+      </div>
+      <div id="contacts">
+        <ul>
+          <li
+            class="contact active"
+            *ngFor="let provider of providers$ | async"
+          >
+            <div
+              class="wrap"
+              (click)="onClick(provider.name_room, provider.name)"
+            >
+              <img src="../../../assets/images/you_user.png" alt="" />
+              <div class="meta">
+                <p class="name">{{ provider.name }}</p>
+                <p class="preview">
+                  Oi, você me mandou uma solicitação e estou aqui para te passar
+                  valores e como funciona meu serviço.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- <div id="bottom-bar">
+			<button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+			<button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+		</div> -->
+    </div>
+    <div class="content">
+      <div class="contact-profile">
+        <img src="../../../assets/images/you_user.png" alt="" />
+        <p>{{ providerName }}</p>
+        <div id="cam">
+          <img src="/../../assets/images/cam.png" />
+        </div>
+      </div>
+      <div class="messages">
+        <ul *ngFor="let msg of messages">
+          <li class="sent">
+            <p>{{ msg.msg_provider }}</p>
+          </li>
+          <li class="replies">
+            <p>{{ msg.msg_client }}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="message-input">
+        <div class="wrap">
+          <input
+            type="text"
+            placeholder="Digite uma mensagem..."
+            name="myMsg"
+            [(ngModel)]="myMsg"
+          />
+          <i class="fa fa-paperclip attachment"></i>
+          <img src="/../../../assets/images/send.png" (click)="sendMessage()" />
+          <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

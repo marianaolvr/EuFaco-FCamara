@@ -1,0 +1,406 @@
+<div class="body">
+  <!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/login"
+              >ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <!-- form -->
+  <div class="container">
+    <div *ngIf="clientRegister" class="row d-flex justify-content-center">
+      <div class="colunas col-10 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <h1 class="title text-center">Cadastre-se</h1>
+
+        <div class="content-forms">
+          <!-- BUTTON CLIENTS AND CONTRACTOR -->
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a
+                class="nav-item nav-link active"
+                id="nav-client-tab"
+                data-toggle="tab"
+                href="#nav-client"
+                role="tab"
+                aria-controls="nav-client"
+                aria-selected="true"
+                >Sou Cliente</a
+              >
+
+              <a
+                class="nav-item nav-link"
+                id="nav-contractor-tab"
+                data-toggle="tab"
+                href="#nav-contractor"
+                role="tab"
+                aria-controls="nav-contractor"
+                aria-selected="false"
+                >Sou Prestador</a
+              >
+            </div>
+          </nav>
+
+          <!-- TABS -->
+          <div class="tab-content" id="nav-tabContent">
+            <!-- TAB CLIENT -->
+            <div
+              class="tab-pane fade show active"
+              id="nav-client"
+              role="tabpanel"
+              aria-labelledby="nav-client-tab"
+            >
+              <form
+                action=""
+                method="POST"
+                id="clientForm"
+                #clientForm="ngForm"
+                (ngSubmit)="clientSignUp(clientForm)"
+              >
+                <div class="form-group">
+                  <label for="name">Nome e Sobrenome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="clientName"
+                    [(ngModel)]="client.name"
+                    #clientName="ngModel"
+                    required
+                  />
+                  <div
+                    class="error"
+                    *ngIf="clientForm.submitted && clientName.invalid"
+                  >
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="clientName.errors.required"
+                    >
+                      Este campo é requerido!
+                    </p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Endereço de e-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="clientEmail"
+                    [(ngModel)]="client.email"
+                    #clientEmail="ngModel"
+                    required
+                    email
+                  />
+                  <div
+                    class="error"
+                    *ngIf="clientForm.submitted && clientEmail.invalid"
+                  >
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="clientEmail.errors.required"
+                    >
+                      Este campo é requerido!
+                    </p>
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="clientEmail.errors.email"
+                    >
+                      Email inválido!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="password">Crie uma senha</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="clientPassword"
+                      [(ngModel)]="client.password"
+                      #clientPassword="ngModel"
+                      required
+                      minlength="5"
+                    />
+                    <div
+                      class="error"
+                      *ngIf="clientForm.submitted && clientPassword.invalid"
+                    >
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="clientPassword.errors.required"
+                      >
+                        Este campo é requerido!
+                      </p>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="clientPassword.errors.minlength"
+                      >
+                        Mínimo 5 caracteres!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="cep">CEP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="clientCep"
+                      [(ngModel)]="client.cep"
+                      #clientCep="ngModel"
+                      (click)="getLocation(clientName)"
+                      required
+                      minlength="8"
+                    />
+                    <div
+                      class="error"
+                      *ngIf="clientForm.submitted && clientCep.invalid"
+                    >
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="clientCep.errors.required"
+                      >
+                        Este campo é requerido!
+                      </p>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="clientCep.errors.minlength"
+                      >
+                        Mínimo 8 dígitos!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- BUTTON REGISTER CLIENT -->
+              <!-- (click)="registerDone()" -->
+              <div class="register-btn d-flex flex-column align-items-center">
+                <button type="submit" class="btn btn-md" form="clientForm">
+                  Criar conta
+                </button>
+                <div class="col-10 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                  <p class="text-center">
+                    Ao criar uma conta, você confirma que leu e concordou com os
+                    nossos
+                    <a href="">
+                      <strong>
+                        Termos de Serviço
+                      </strong></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB CONTRACTOR -->
+            <div
+              class="tab-pane fade"
+              id="nav-contractor"
+              role="tabpanel"
+              aria-labelledby="nav-contractor-tab"
+            >
+              <form
+                action=""
+                method="post"
+                id="providerForm"
+                #providerForm="ngForm"
+                (ngSubmit)="providerSignUp(providerForm)"
+                novalidate
+              >
+                <div class="form-group">
+                  <label for="name">Nome e Sobrenome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="providerName"
+                    [(ngModel)]="provider.name"
+                    #providerName="ngModel"
+                    required
+                  />
+                  <div
+                    class="error"
+                    *ngIf="providerForm.submitted && providerName.invalid"
+                  >
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="providerName.errors.required"
+                    >
+                      Este campo é requerido!
+                    </p>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Endereço de e-mail</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    name="providerEmail"
+                    [(ngModel)]="provider.email"
+                    #providerEmail="ngModel"
+                    required
+                    email
+                  />
+                  <div
+                    class="error"
+                    *ngIf="providerForm.submitted && providerEmail.invalid"
+                  >
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="providerEmail.errors.required"
+                    >
+                      Este campo é requerido!
+                    </p>
+                    <p
+                      class="alert alert-danger"
+                      *ngIf="providerEmail.errors.email"
+                    >
+                      Email inválido!
+                    </p>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="col">
+                    <label for="password">Crie uma senha</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      name="providerPassword"
+                      [(ngModel)]="provider.password"
+                      #providerPassword="ngModel"
+                      required
+                      minlength="5"
+                    />
+                    <div
+                      class="error"
+                      *ngIf="providerForm.submitted && providerPassword.invalid"
+                    >
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="providerPassword.errors.required"
+                      >
+                        Este campo é requerido!
+                      </p>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="providerPassword.errors.minlength"
+                      >
+                        Mínimo 5 caracteres!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <label for="cep">CEP</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="providerCep"
+                      [(ngModel)]="provider.cep"
+                      #providerCep="ngModel"
+                      (click)="getLocation(providerName)"
+                      required
+                    />
+                    <div
+                      class="error"
+                      *ngIf="providerForm.submitted && providerCep.invalid"
+                    >
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="providerCep.errors.required"
+                      >
+                        Este campo é requerido!
+                      </p>
+                      <p
+                        class="alert alert-danger"
+                        *ngIf="providerCep.errors.minlength"
+                      >
+                        Mínimo 8 dígitos!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- BUTTON REGISTER CONTRACTOR -->
+              <div class="register-btn d-flex flex-column align-items-center">
+                <!-- NESTE BOTAO LINKAR PAGINA 2 DO CADASTRO DO PRESTADOR -->
+                <button type="submit" class="btn btn-md" form="providerForm">
+                  Criar conta
+                </button>
+                <div class="col-10 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+                  <p class="text-center">
+                    Ao criar uma conta, você confirma que leu e concordou com os
+                    nossos
+                    <a href=""
+                      ><strong>
+                        Termos de Serviço
+                      </strong></a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-center mt-5 mb-5">
+          Já tem cadastro?
+          <a routerLink="/login">
+            <strong>Faça login</strong>
+          </a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="RegisterDone" class="container">
+    <div
+      class="row d-flex flex-column justify-content-center align-items-center register-done"
+    >
+      <span class="fas fa-check-circle fa-3x" style="color: #fc4638;"></span>
+      <h1 class="title-register-done text-center">CADASTRO REALIZADO!</h1>
+      <h5 class="text-center">
+        Seja bem-vindo (a)! Agora você faz parte do nosso time. Esperamos que
+        tenha uma ótima experiência com a plataforma.
+      </h5>
+      <button type="submit" class="btn btn-md">
+        <strong>Concluir</strong>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

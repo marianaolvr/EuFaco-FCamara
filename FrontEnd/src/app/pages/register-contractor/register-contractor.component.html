@@ -1,0 +1,291 @@
+<div class="body">
+ <!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/login"
+              >ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <!-- form -->
+  <div class="container">
+    <div *ngIf="contractorRegister" class="row d-flex justify-content-center">
+      <div class="colunas col-10 col-sm-8 col-md-8 col-lg-6 col-xl-6">
+        <h1 class="title text-center">Bem-vindo!</h1>
+        <p class="text-center">
+          Chegou a hora de criarmos o seu perfil profissional. Quanto mais
+          detalhes, mais segurança você vai passar aos seus clientes!
+        </p>
+
+        <div class="content-forms">
+          <div class="register-btn d-flex flex-column align-items-center">
+            <div class="btn btn-md">Sou Prestador</div>
+          </div>
+
+          <form action="" id="form" #form="ngForm" (ngSubmit)="update(form)">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col">
+                  <label for="name">Nome e Sobrenome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="name"
+                    [(ngModel)]="provider.name"
+                    #name="ngModel"
+                    required
+                  />
+                  <div class="error" *ngIf="form.submitted && name.invalid">
+                    <p class="alert alert-danger" *ngIf="name.errors.required">
+                      Este campo é requerido!
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <label for="telefone">Telefone (com DDD)</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    name="tel"
+                    [(ngModel)]="provider.tel"
+                    #tel="ngModel"
+                    required
+                    minlength="11"
+                  />
+                  <div class="error" *ngIf="form.submitted && tel.invalid">
+                    <p class="alert alert-danger" *ngIf="tel.errors.required">
+                      Este campo é requerido!
+                    </p>
+                    <p class="alert alert-danger" *ngIf="tel.errors.minlength">
+                      Mínimo 11 dígitos!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input
+                type="number"
+                class="form-control"
+                name="cpf"
+                [(ngModel)]="provider.cpf"
+                #cpf="ngModel"
+                required
+                minlength="11"
+              />
+              <div class="error" *ngIf="form.submitted && cpf.invalid">
+                <p class="alert alert-danger" *ngIf="cpf.errors.required">
+                  Este campo é requerido!
+                </p>
+                <p class="alert alert-danger" *ngIf="cpf.errors.minlength">
+                  Mínimo 11 dígitos!
+                </p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Endereço de e-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                [(ngModel)]="provider.email"
+                #email="ngModel"
+                required
+                email
+              />
+              <div class="error" *ngIf="form.submitted && email.invalid">
+                <p class="alert alert-danger" *ngIf="email.errors.required">
+                  Este campo é requerido!
+                </p>
+                <p class="alert alert-danger" *ngIf="email.errors.email">
+                  Email inválido!
+                </p>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cep">Sua localização (por CEP)</label>
+              <input
+                type="text"
+                class="form-control"
+                name="cep"
+                [(ngModel)]="provider.cep"
+                #cep="ngModel"
+                required
+                minlength="8"
+              />
+              <div class="error" *ngIf="form.submitted && cep.invalid">
+                <p class="alert alert-danger" *ngIf="cep.errors.required">
+                  Este campo é requerido!
+                </p>
+                <p class="alert alert-danger" *ngIf="cep.errors.minlength">
+                  Mínimo 8 dígitos!
+                </p>
+              </div>
+            </div>
+
+            <!-- ADICIONAR FOTO -->
+            <div class="form-group">
+              <label for="imageUpload">Adicione uma foto de perfil</label>
+              <input type="file" class="form-control-file" id="imageUpload" />
+            </div>
+
+            <hr />
+
+            <h4>SEUS SERVIÇOS</h4>
+
+            <div class="form-group">
+              <label for="contratorArea">Qual a sua área de atuação?</label>
+              <select
+                class="form-control"
+                id="contratorArea"
+                name="id_category"
+                #id_category="ngModel"
+                [(ngModel)]="category.id_category"
+              >
+                <option>Pedreiro</option>
+                <option>Pintor</option>
+                <option>Eletricista</option>
+                <option>Jardineiro</option>
+                <option>Ferreiro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label
+                >Prefere receber orçamentos para serviço presencial ou
+                online</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="serviceType1"
+                  value="Presencial"
+                  name="type_service"
+                  #type_service="ngModel"
+                  [(ngModel)]="provider.type_service"
+                />
+                <label class="form-check-label" for="serviceType1">
+                  Presencial
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="serviceType2"
+                  value="Online"
+                  name="type_service"
+                  #type_service="ngModel"
+                  [(ngModel)]="provider.type_service"
+                />
+                <label class="form-check-label" for="serviceType2">
+                  Online
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  id="serviceType3"
+                  value="Ambos"
+                  name="type_service"
+                  #type_service="ngModel"
+                  [(ngModel)]="provider.type_service"
+                />
+                <label class="form-check-label" for="serviceType3">
+                  Ambos
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1"
+                >Fale um pouco sobre você (Breve descrição)</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                name="description"
+                [(ngModel)]="provider.description"
+                #description="ngModel"
+                required
+              ></textarea>
+            </div>
+          </form>
+
+          <!-- BUTTON REGISTER -->
+          <div
+            class="buttons-register d-flex align-items-baseline justify-content-end"
+          >
+            <button class="skip-btn" (click)="registerDone()" type="button">
+              <a>Pular</a>
+            </button>
+            <div class="register-btn">
+              <!-- BOTAO QUE VAI PARA A PÁGINA DE REGISTRO FEITO COM SUCESSO COM ngIf -->
+              <button type="submit" class="btn btn-md" form="form">
+                Criar conta
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGINA DE CADASTRO FEITO COM SUCESSO QUE APARECE QUANDO USUARIO CLICA EM "CRIAR CONTA" -->
+  <div *ngIf="RegisterDone" class="container">
+    <div
+      class="row d-flex flex-column justify-content-center align-items-center register-done"
+    >
+      <span class="fas fa-check-circle fa-3x" style="color: #fc4638;"></span>
+      <h1 class="title-register-done text-center">CADASTRO REALIZADO!</h1>
+      <h5 class="text-center">
+        Seja bem-vindo (a)! Agora você faz parte do nosso time. Esperamos que
+        tenha uma ótima experiência com a plataforma.
+      </h5>
+      <button type="button" class="btn btn-md" routerLink="/home-prestador">
+        <strong>Concluir</strong>
+      </button>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

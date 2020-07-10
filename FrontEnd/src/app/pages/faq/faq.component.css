@@ -1,0 +1,156 @@
+.body {
+  background:
+  url("src/assets/Elements/elemento_azul.png"),
+  url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size:
+  22%,
+  33%;
+
+  background-position:
+  0% 5%,
+  top right;
+}
+
+
+h1 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #305E92;
+  text-align: center;
+  margin-top: 10%;
+}
+
+h2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #305E92;
+  text-align: center;
+  margin-top: 10%;
+}
+
+
+h3 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: #305E92;
+  text-align: left;
+  margin-top: 5%;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+
+
+.form-control{
+  border: #707070 solid;
+}
+
+.btn-search{
+  background-color: #FC4638;
+  border-radius: 43px;
+}
+
+.btn-search a {
+  color: white;
+}
+
+/* FIM DO NAVBAR */
+
+
+/* COLLAPSE FAQ */
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid #70707036;
+}
+
+
+.card {
+  border: none;
+}
+
+button {
+  color: #707070;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+.faq-contractor{
+  margin-bottom: 3%;
+}
+
+
+/* BUTTON HELP */
+#help-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  margin-bottom: 10%;
+}
+
+#help-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+
+/* margin entre join us e footer */
+.main {
+  margin-bottom: 5%;
+}
+
+
+
+

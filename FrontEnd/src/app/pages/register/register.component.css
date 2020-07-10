@@ -1,0 +1,146 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 28%, 33%;
+
+  background-position: 0% 3%, top right;
+}
+
+a {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: #8B8A8A;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+label {
+  font-weight: bold;
+  color: #707070;
+}
+
+strong {
+  color: #305E92;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+/* FIM DO NAVBAR */
+
+/* form */
+
+h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  color: #305e92;
+  font-weight: bold;
+}
+
+.title {
+  margin-top: 5%;
+}
+
+form {
+  padding: 1% 5%;
+}
+
+.content-forms {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  padding: 2% 2%;
+  border: 1px solid #70707079;
+  box-shadow: 0px 10px 6px #00000014;
+  margin-top: 5%;
+  border-radius: 3%;
+}
+
+.nav-tabs {
+  border: none;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+#nav-client-tab {
+  background-color: #305e92;
+  color: white;
+  margin-right: 3%;
+  border-radius: 40px;
+}
+
+#nav-contractor-tab {
+  background-color: #fc4638;
+  color: white;
+  margin-left: 3%;
+  border-radius: 40px;
+}
+.register-btn {
+  margin-top: 5%;
+}
+
+.btn {
+  background: #fc4638 0% 0% no-repeat padding-box;
+  border-radius: 40px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* registerDone */
+
+.title-register-done {
+  margin-top: 1.5%;
+}
+
+.register-done {
+  height: 90vh;
+}
+
+h5 {
+  width: 70%;
+  color: #707070;
+  font-family: "Titillium Web", sans-serif;
+}

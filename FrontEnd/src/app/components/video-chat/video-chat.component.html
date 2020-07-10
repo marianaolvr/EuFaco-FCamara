@@ -1,0 +1,37 @@
+<!-- Botão para acionar modal -->
+<button type="button" class="btn" data-toggle="modal" data-target="#modalVideoCall">
+  <i class="fas fa-video"></i>
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modalVideoCall" tabindex="-1" role="dialog" aria-labelledby="ModalLabelVideoCall"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- ADD NOME DO USUARIO QUE ESTA CONVERSANDO. É POSSIVEL? -->
+        <h5 class="modal-title" id="ModalLabelVideoCall">Você está falando com:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <!-- VIDEOCHAMADA -->
+        <div class="video-chat-container">
+          <div class="video-container">
+            <video autoplay class="remote-video" id="remote-video"></video>
+            <video autoplay muted class="local-video" id="local-video"></video>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-close" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="videochat.js"></script>

@@ -1,0 +1,169 @@
+<div class="body">
+  <!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/login"
+              >ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="right-element p-2">
+        <button type="button" class="btn btn-lg ml-3" id="contractor-btn">
+          <a routerLink="/cadastro">Sou Prestador</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- CARD DE BUSCA -->
+  <div class="container">
+    <div
+      class="card-inicial col-10 col-md-8 col-lg-8 col-xl-8 align-items-center mx-auto"
+    >
+      <div class="image-card">
+        <img
+          src="/assets/Illustrations/IMAGEM_HOMEPRESTADOR.png"
+          alt=""
+          style="width: 100%;"
+        />
+      </div>
+      <div class="card-body">
+        <!-- O NUMERO de profissionais encontrados VAI DEPENDER DA BUSCA POR CEP -->
+        <h4 class="card-title">
+          Encontramos {{ qtdProviders }} profissionais de
+          {{ categorie }} próximos a você!
+        </h4>
+        <p class="card-text">
+          Lembre-se de obter todas as informações necessárias para seu pedido
+          antes de fechar com um dos profissionais.
+        </p>
+
+        <!-- PEGAR CEP DO USUARIO -->
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="cep"
+          placeholder="CEP"
+          (blur)="getLocation(cep)"
+        />
+      </div>
+    </div>
+
+    <!-- SETA -->
+    <div class="arrow row mt-5 mb-5">
+      <i
+        class="fas fa-chevron-circle-down fa-3x mx-auto"
+        style="color: #305e92;"
+      ></i>
+    </div>
+
+    <!-- BUSCA -->
+    <div class="row">
+      <div
+        class="search-block col-10 col-md-8 col-lg-8 col-xl-8 align-items-center mx-auto"
+      >
+        <!-- FILTRAR POR -->
+        <div class="form-group">
+          <label for="search-filter">Filtrar por</label>
+
+          <!-- PEGAR TIPOS DE SERVIÇOS PRESTADOS DO BANCO -->
+          <select class="form-control" id="search-filter">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+
+        <!-- CARDS PRESTADORES -->
+
+        <!-- INICIO DO CARD -->
+        <div
+          class="card-contractor d-flex align-items-center"
+          *ngFor="let provider of providers$ | async"
+        >
+          <div class="card-image">
+            <!-- PEGAR IMAGEM DO PERDIL DO PRESTADOR -->
+            <img
+              src="/assets/elements/perfil-fundo-user.jpg"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ provider.name }}</h5>
+            <!-- pegar nome do prestador -->
+            <!-- pegar serviço, cep, e se ele vai prestar online ou presencial -->
+            <h6 class="card-subtitle mb-2 text-muted">
+              {{ categorie }} | {{ provider.address_city }} |
+              {{ provider.type_service }}
+            </h6>
+            <!-- pegar descrição do perfil do prestador -->
+            <p class="card-text">
+              {{ provider.description }}
+              <a class="public-profile" href="#">Mostrar mais</a>
+            </p>
+          </div>
+          <button class="btn btn-md card-btn" type="button" (click)="onClick()">
+            <a
+              class="request-form"
+              routerLink="/contatar/prestador/{{ provider.id_provider }}"
+              >Contatar</a
+            >
+            <!-- BOTAO PARA IR DIRETO PARA FORM DE SOLICITACAO -->
+          </button>
+        </div>
+        <!-- FIM DO CARD -->
+
+        <div class="btn-01 row justify-content-center">
+          <!-- CARREGAR SEGUNDA PARTE DA BUSCA -->
+          <button type="button" class="btn btn-md" id="contractor-btn">
+            <a href="">Mostrar Mais</a>
+          </button>
+        </div>
+
+        <div class="btn-02 row justify-content-end">
+          <button type="button" class="btn btn-md" id="contractor-btn">
+            <a href="">Precisa de ajuda?</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-join-us></app-join-us>
+</div>
+<app-footer></app-footer>

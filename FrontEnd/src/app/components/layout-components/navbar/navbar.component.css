@@ -1,0 +1,27 @@
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.menu-align {
+  align-items: center;
+}

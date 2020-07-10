@@ -1,0 +1,290 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+
+  background-repeat: no-repeat;
+
+  background-size: 24%, 29%;
+
+  background-position: 0% 10%, top right;
+}
+
+
+
+
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+
+.navbar-toggler{
+  color:#FC4638;
+  border: none;
+}
+.right-element a {
+  text-decoration: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+
+
+#card-info {
+  background: #FFF4F4;
+  border-radius: 30px;
+  border: none;
+
+}
+#image-alert {
+  max-width: 50%;
+  max-height: 100%;
+  margin-top: 6%;
+  margin-left: 35%;
+}
+.card-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 8%;
+  margin-left: 35%;
+}
+#card-info h5 {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #305e92;
+}
+#card-info p {
+  text-align: left;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+#card-info p a {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0px;
+  color: #fc4638;
+  opacity: 1;
+}
+#font-orcamento h3 {
+  font-weight: bolder;
+  margin-left: 11%;
+  font-family: "Trebuchet MS", sans-serif;
+  color: #305e92;
+  letter-spacing: 0px;
+  opacity: 1;
+}
+#select-solicitado {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#select-solicitados {
+  border: transparent;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: -0.16px;
+  color: #707070;
+  opacity: 1;
+}
+#select-dia {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+#select-dias {
+  border: white;
+  font-weight: bolder;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: -0.16px;
+  color: #707070;
+  opacity: 1;
+}
+#card-orcamento {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 10px 6px #00000014;
+  border: 1px solid #707070;
+  border-radius: 30px;
+  opacity: 1;
+}
+#orcamento-name {
+  text-align: left;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+#orcamento-type {
+  text-align: left;
+  font-weight: normal;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+#orcamento-description {
+  text-align: left;
+  font-weight: normal;
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 0px;
+  color: #707070;
+}
+#accepped-btn {
+  border-radius: 40px;
+  background-color: #305e92;
+  margin-left: 10%;
+}
+
+#accepped-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#passar-btn a {
+  color: #fc4638;
+  border-bottom: 1px solid #fc4638;
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+#mais-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  margin-left: 10%;
+}
+#mais-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+#ajuda-btn {
+  margin-left: 30%;
+  border-radius: 40px;
+  background-color: #fc4638;
+  margin-left: 10%;
+}
+#ajuda-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+#footer {
+  background-color: #fafafa;
+  padding: 5% 5%;
+}
+#footer p {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: normal;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+@media (min-width: 1420px) {
+  .body {
+    background: url("src/assets/Elements/elemento_azul.png"),
+      url("src/assets/Elements/elemento_laranja-crop.png");
+    background-repeat: no-repeat;
+
+    background-size: 33%, 33%;
+
+    background-position: 0% 4%, top right;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 1106px) {
+  .body {
+    background: url("src/assets/Elements/elemento_azul.png"),
+      url("src/assets/Elements/elemento_laranja-crop.png");
+    background-repeat: no-repeat;
+
+    background-size: 33%, 33%;
+
+    background-position: 0% 4%, top right;
+  }
+}
+
+@media (max-width: 770px) {
+  .body {
+    background: url("src/assets/Elements/elemento_azul.png"),
+      url("src/assets/Elements/elemento_laranja-crop.png");
+    background-repeat: no-repeat;
+
+    background-size: 33%, 33%;
+
+    background-position: 0% 4%, top right;
+  }
+}
+
+@media (max-width: 618px) {
+  .body {
+    background: url("src/assets/Elements/elemento_azul.png"),
+      url("src/assets/Elements/elemento_laranja-crop.png");
+    background-repeat: no-repeat;
+
+    background-size: 33%, 33%;
+
+    background-position: 0% 4%, top right;
+  }
+}
+
+@media (max-width: 575px) {
+  .body {
+    background: url("src/assets/Elements/elemento_azul.png"),
+      url("src/assets/Elements/elemento_laranja-crop.png");
+    background-repeat: no-repeat;
+
+    background-size: 33%, 33%;
+
+    background-position: 0% 4%, top right;
+  }
+}

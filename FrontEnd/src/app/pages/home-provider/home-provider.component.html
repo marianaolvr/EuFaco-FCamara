@@ -1,0 +1,191 @@
+<div class="body">
+  <!-- NAVBAR -->
+  <div class="nav-bar" id="menu-site">
+    <div class="container">
+      <div class="d-flex">
+        <a class="navbar-brand p-2" href="#"><img src="/assets/logo/logo_web.png" width="115"
+            class="d-inline-block align-top" alt=""></a>
+
+        <nav class="navbar navbar-expand-lg navbar-light p-2" >
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav menu-align" id="navbar">
+              <li class="nav-item">
+                <a class="nav-link ml-3" id="menu-font" href="#" style="text-decoration: solid underline #FC4638;">+
+                  ORÇAMENTOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link ml-3" id="menu-font" href="#">MENSAGENS</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="right-element ml-auto p-2">
+          <a class="nav-link ml-3" id="menu-font" href="#">MEU PERFIL</a>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-end" id="nav-dropdown-menu1">
+      <div class="col-md-3 ml-auto">
+        <div
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdownMenuLink"
+          id="nav-dropdown-menu"
+        >
+          <a class="dropdown-item" href="#">Editar perfil</a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="#">Como funciona</a>
+
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="#">Buscar serviços</a>
+          <div class="dropdown-divider"></div>
+
+          <a class="dropdown-item" href="#">Sair</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="card w-75 my-5 justify-content-center" id="card-info">
+        <div class="row align-items-center">
+          <div class="col-sm-4 mb-4">
+            <img
+              class="card-image"
+              id="image-alert"
+              src="/assets/Illustrations/IMAGEM_HOMEPRESTADOR.png"
+              alt=""
+            />
+          </div>
+
+          <div class="col-sm-8">
+            <div class="card-body">
+              <h5 class="card-title">Deixe seu perfil sempre atualizado!</h5>
+
+              <p class="card-text">
+                Deixe seu perfil sempre atualizado! Quanto mais informações você
+                disponibiliza para os clientes,<strong>
+                  mais solicitações </strong
+                >você vai receber. Atualize sua galeria de fotos, sua descrição
+                e as informações de serviço. <a href="#"> Editar meu perfil</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-start my-5" id="font-orcamento">
+      <div class="col-md-12">
+        <h3 class="big-text">+ORÇAMENTOS</h3>
+      </div>
+    </div>
+
+    <div class="row justify-content-between my-5" id="maincontent">
+      <div class="col-md-2" id="select-solicitado">
+        <select class="custom-select" id="select-solicitados">
+          <option selected>Solicitados</option>
+
+          <option value="1">Fechados</option>
+        </select>
+      </div>
+
+      <div class="col-md-2" id="select-dia">
+        <select class="custom-select" id="select-dias">
+          <option selected>Últimos 7 dias</option>
+
+          <option value="1">15 dias</option>
+
+          <option value="2">30 dias</option>
+        </select>
+      </div>
+    </div>
+
+    <div
+      class="row justify-content-center"
+      *ngFor="let client of clients$ | async"
+    >
+      <div class="card w-75 my-5" id="card-orcamento">
+        <div class="row">
+          <div class="col-sm-6 col-md-2">
+            <img
+              class="card-image"
+              src="../../assets/Elements/round_person_black_48dp.png"
+              alt=""
+            />
+          </div>
+          <div class="col-sm-6 col-md-7">
+            <div class="card-body">
+              <h5 class="card-title" id="orcamento-name">{{ client.name }}</h5>
+
+              <h5 class="card-title" id="orcamento-type">
+                Pintura | {{ client.address_city }} | {{ client.type_service }}
+              </h5>
+
+              <p class="card-text" id="orcamento-description">
+                {{ client.description }}
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3">
+            <div class="row justify-content-md-center mt-5 mb-2">
+              <div class="col-md-3 col-auto mr-auto">
+                <button
+                  type="button"
+                  class="btn btn-sm ml-4"
+                  id="accepped-btn"
+                  (click)="sendRoom(client.id_client)"
+                >
+                  <a>Aceitar</a>
+                  <!-- routerLink="/contatar/prestador/{{ client.id_client }}" -->
+                  <!-- routerLink="/messages-prestador" -->
+                </button>
+              </div>
+            </div>
+            <div class="row justify-content-md-center">
+              <div class="col-md-3 mr-auto">
+                <button type="button" class="btn btn-sm ml-4" id="passar-btn">
+                  <a href="">Passar</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="form-group text-center my-5">
+        <button type="button" class="btn btn-sm ml-4" id="mais-btn">
+          <a href="">Mostrar Mais </a>
+        </button>
+      </div>
+    </div>
+    <div class="row justify-content-end">
+      <div class="form-group text-center my-5">
+        <button type="button" class="btn btn-sm ml-4" id="ajuda-btn">
+          <a href="">Precisa de Ajuda?</a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row justify-content-center" id="footer">
+      <div class="col-6">
+        <p>Nome da plataforma Inc.</p>
+        <p>Informações de contato</p>
+        <p>SP, Brasil</p>
+      </div>
+    </div>
+  </div>
+</div>

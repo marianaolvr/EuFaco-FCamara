@@ -1,0 +1,592 @@
+<div class="body">
+
+<!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/login"
+              >ENTRAR</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="right-element p-2">
+        <button type="button" class="btn btn-lg ml-3" id="contractor-btn">
+          <a routerLink="/cadastro">Sou Prestador</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- SECTION 1 - BUSCAR -->
+  <div class="section1">
+    <div
+      class="teste mt-5 d-flex flex-column justify-content-center align-items-center main-text"
+
+    >
+      <h1 class="text-center" id="title">PRECISANDO DE ALGUM SERVIÇO?</h1>
+      <h4 class="text-center" id="subtitle">
+        Aqui você encontra as melhores opções de prestadores de serviço para te
+        ajudar <strong>online ou presencialmente</strong>.
+      </h4>
+
+      <div class="input-group mt-3 mx-auto" id="input-size">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Qual serviço você está precisando?"
+          id="home-label"
+          aria-describedby="search-button"
+          name="categorie"
+          [(ngModel)]="categorie"
+        />
+        <button
+          type="button"
+          (click)="onClick()"
+          class="btn btn-sm ml-4"
+          id="search-btn"
+        >
+          <a>Buscar</a>
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+
+  <!-- SECTION 2 - COMO FUNCIONA - SECTION 2 -->
+  <div class="section2">
+    <h2 class="text-center" id="title">PRECISOU? ENCONTROU.</h2>
+    <div class="container">
+      <div class="row mt-5 how-works">
+        <div class="col-sm card-s2">
+          <div class="card mt-4" style="width: 16rem; border-style: none;">
+            <img
+              class="card-img-top"
+              src="assets/Illustrations/home_1.png"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Use a barra de pesquisa para escolher o serviço que precisa no
+              momento! Forneceremos uma lista de prestadores que estão pertinho!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm card-s2">
+          <div class="card mt-4" style="width: 16rem; border-style: none;">
+            <img
+              class="card-img-top"
+              src="assets/Illustrations/home_2.png"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Selecione o prestador de interesse, verifique seu perfil e abra
+              solicitação de orçamento clicando em contratar!
+            </p>
+          </div>
+        </div>
+
+        <div class="col-sm card-s2">
+          <div class="card mt-4" style="width: 16rem; border-style: none;">
+            <img
+              class="card-img-top"
+              src="assets/Illustrations/home_3.png"
+              alt=""
+            />
+          </div>
+          <div class="card-body">
+            <p class="card-text">
+              Receba o orçamento do prestador e prossiga com a sua negociação.
+              Você pode ESCOLHER ter seu serviço online ou presencialmente!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 3 - SLIDERS IMGS -->
+  <div class="section3">
+    <h2 class="text-center mb-3 mt-5" id="title">
+      SERVIÇO ONLINE E PRESENCIAL!
+    </h2>
+    <!-- SLIDER WEB -->
+    <div
+      id="carouselControls"
+      class="carousel slide d-none d-sm-none d-md-block"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- SLIDER 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto1.png" alt="" />
+            </div>
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto2.png" alt="" />
+            </div>
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto3.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 1 -->
+        <!-- SLIDER 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto4.png" alt="" />
+            </div>
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto5.png" alt="" />
+            </div>
+            <div class="col-3">
+              <img class="d-block w-100" src="assets/images/foto6.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 2 -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span
+            class="fas fa-chevron-circle-left fa-lg"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselControls"
+          role="button"
+          data-slide="next"
+        >
+          <span
+            class="fas fa-chevron-circle-right fa-lg"
+            aria-hidden="true"
+          ></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+    <!-- END OF SLIDER WEB -->
+
+    <!-- SLIDER SM  -->
+
+    <div
+      id="carouselControls"
+      class="carousel slide d-none d-sm-block d-md-none"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- SLIDER 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto1.png" alt="" />
+            </div>
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto3.png" alt="" />
+            </div>
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto4.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto5.png" alt="" />
+            </div>
+            <div class="col-5">
+              <img class="d-block w-80" src="assets/images/foto6.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- END OF SLIDER SM -->
+
+    <!-- SLIDER XS  -->
+
+    <div
+      id="carouselControls"
+      class="carousel slide d-block d-sm-none"
+      data-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <!-- SLIDER 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto1.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto2.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 3 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto3.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 4 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto4.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 5 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto5.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <!-- SLIDER 6 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9">
+              <img class="d-block w-80" src="assets/images/foto6.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="#carouselControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- END OF SLIDER XS -->
+  </div>
+
+  <!-- SECTION 4 SLIDER CARDS -->
+  <div class="section4">
+    <h2 class="text-center mb-3 mt-5" id="title">SEM ARREPENDIMENTOS!</h2>
+    <!-- SLIDER WEB -->
+    <div
+      id="carouselControlsAvaliation"
+      class="carousel slide d-none d-sm-none d-md-block"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselControlsAvaliation"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselControlsAvaliation" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- SLIDER 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-4 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+            <div class="col-4 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 1 -->
+        <!-- SLIDER 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-4 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+            <div class="col-4 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 2 -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselControlsAvaliation"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselControlsAvaliation"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+    <!-- END OF SLIDE WEB -->
+
+    <!-- SLIDER MOBILE -->
+    <div
+      id="carouselControlsAvaliation"
+      class="carousel slide d-sm-block d-sm-block d-md-none"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselControlsAvaliation"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselControlsAvaliation" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- SLIDER 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-9 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 1 -->
+        <!-- SLIDER 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-9 card-carrousel">
+              <img
+                class="card-image"
+                src="../assets/Elements/perfil-fundo.jpg"
+                alt=""
+              />
+              <div class="card-content">
+                <p>
+                  Precisava de um eletricista com urgência e recebi retorno em
+                  menos de 24 horas!
+                </p>
+                <p><strong>Eliana H. Cliente</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- END OF SLIDER 2 -->
+        <a
+          class="carousel-control-prev"
+          href="#carouselControlsAvaliation"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselControlsAvaliation"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+    </div>
+    <!-- END OF SLIDER MOBILE -->
+  </div>
+
+  <!-- SECTION 5 - JOIN US -->
+  <div class="section5">
+    <h2 class="text-center mb-3 mt-5" id="title">SEM ARREPENDIMENTOS!</h2>
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <img
+            class="img-fluid"
+            src="assets/Illustrations/junte-se-a-nos.png"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center join-content mt-5"
+        >
+          <h2>É PRESTADOR DE SERVIÇOS?</h2>
+          <h2>JUNTE-SE A NÓS!</h2>
+          <P>Inscreva-se gratuitamente para encontrar novos clientes</P>
+          <button type="button" class="btn btn-lg join-btn">
+            <a routerLink="/cadastro">Sou Prestador</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="section6">
+    <div class="row justify-content-center">
+      <div class="col-6 footer">
+        <p>Nome da plataforma Inc.</p>
+        <p>Informações de contato</p>
+        <p>SP, Brasil</p>
+      </div>
+    </div>
+  </div>
+</div>

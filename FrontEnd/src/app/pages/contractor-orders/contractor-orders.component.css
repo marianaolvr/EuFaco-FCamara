@@ -1,0 +1,132 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 28%, 33%;
+
+  background-position: 0% 3%, top right;
+}
+
+a {
+  font-family: "Titillium Web", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+
+.navbar-toggler{
+  color:#FC4638;
+  border: none;
+}
+.right-element a {
+  text-decoration: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+
+/* SECTION1 */
+
+.order {
+  margin-top: 7%;
+  border: 1px solid #a5a5a59f;
+  box-shadow: 0px 10px 6px #00000014;
+  border-radius: 3%;
+  padding: 3%;
+  background-color: white;
+
+}
+
+.client-info {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.image-fluid {
+  border-radius: 50%;
+  width: 15%;
+}
+
+#pass-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin-right: 4%;
+}
+
+#pass-btn a {
+  color: #fc4638;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: 0px;
+
+}
+
+#acept-btn {
+  border-radius: 43px;
+  background-color: #305e92;
+
+}
+
+#acept-btn a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+
+/* BUTTON HELP */
+#help-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  margin-bottom: 7%;
+  margin-top: 10%;
+}
+
+#help-btn a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}

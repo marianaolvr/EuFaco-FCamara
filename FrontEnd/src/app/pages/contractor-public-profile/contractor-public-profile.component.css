@@ -1,0 +1,258 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 22%, 33%;
+
+  background-position: 0% 16%, top right;
+
+  /* MARGEM COM O FOOTER */
+  margin-bottom: 5%;
+}
+
+h4 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #305e92;
+  text-align: left;
+}
+
+h5 {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+  text-align: left;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+/* FIM DO NAVBAR */
+
+/* SECTION 1 - TIPS CARDS */
+
+.section1 {
+  margin-top: 4%;
+}
+.card-inicial {
+  display: flex;
+  background-color: #fff4f4;
+  border-radius: 30px;
+}
+
+.card-text {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+/* SECTION 2 - PROFILE */
+.section2 {
+  margin-bottom: 7%;
+  margin-top: 3%;
+}
+
+.profile {
+  padding-left: 5%;
+  padding-right: 5%;
+  box-shadow: 0px 10px 6px #00000014;
+  border: 1px solid #cac9c9;
+  border-radius: 2%;
+}
+
+/* PROFILE-HEADER */
+
+
+.profile-header {
+  margin-top: 7%;
+}
+
+.video-available {
+  background-color: #e1e8f0;
+  width: fit-content;
+  padding: 0.5% 5.5%;
+  border-radius: 8px;
+}
+
+.content p {
+  font-weight: 600;
+}
+
+.points-avaliation {
+  color: #fac008;
+}
+
+.image-profile img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.content {
+  margin-left: 2%;
+}
+
+/* PROFILE-DESCRIPTION */
+
+h6 {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: #707070;
+}
+
+hr {
+  margin-right: 4%;
+}
+
+/* PROFILE PICTURES */
+.profile-pictures img {
+  width: 150px;
+  height: 150px;
+  margin-right: 2%;
+}
+
+/* PROFILE AVALIATIONS */
+
+.points-avaliation-2 {
+  color: #707070;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.fa-star {
+  color: #fac008;
+}
+
+/* BTN CONTACT */
+.btn-contact {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 4%;
+}
+
+#contact-btn {
+  border-radius: 40px;
+  background-color: #305e92;
+  padding: 0.5% 5%;
+}
+
+#contact-btn a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+/* BUTTON HELP */
+#help-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  margin-top: 10%;
+}
+
+#help-btn a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 767px) {
+  .card-inicial {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 521px) {
+  .image-profile img {
+    width: 100px;
+  }
+
+  .image-card {
+    display: none;
+  }
+
+.content h5 {
+  margin: 0.5%;
+}
+
+  .content p {
+    margin: 0.3%;
+  }
+
+  .section1 {
+    margin-top: 5%;
+  }
+
+  .section2 {
+    margin-top: 5%;
+  }
+}
+
+@media (max-width: 444px) {
+  .profile-pictures img {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 4%;
+  }
+}
+
+@media (max-width: 414px) {
+  .profile {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}

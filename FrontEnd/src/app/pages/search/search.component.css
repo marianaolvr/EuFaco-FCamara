@@ -1,0 +1,178 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 22%, 33%;
+
+  background-position: 0% 16%, top right;
+
+  /* MARGEM COM O FOOTER */
+  margin-bottom: 5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h4 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  color: #305e92;
+  text-align: left;
+}
+
+h5 {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+  text-align: left;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#contractor-btn {
+  border-radius: 40px;
+  background-color: #fc4638;
+  /* margin-left: 10%; */
+}
+
+#contractor-btn a {
+  color: rgb(255, 255, 255);
+
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+/* FIM DO NAVBAR */
+
+/* SECTION 1 - TIPS CARDS */
+
+.section1 {
+  margin-top: 4%;
+}
+.card-inicial {
+  display: flex;
+  background-color: #fff4f4;
+  border-radius: 30px;
+  margin-top: 3%;
+}
+
+.card-text {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+
+
+.search-block {
+  margin-bottom: 7%;
+}
+
+
+/* CARD PRESTADOR */
+
+.card-contractor {
+  margin-top: 5%;
+  box-shadow: 0px 10px 6px #00000014;
+  border: 1px solid #707070;
+  border-radius: 30px;
+  padding: 5% 3%;
+}
+
+
+.card-image img {
+  border-radius: 50%;
+}
+
+.card-image {
+  margin-right: 2%;
+}
+
+.public-profile {
+  font-family: "Titillium Web", sans-serif;
+  color: #FC4638;
+  font-weight: bold;
+}
+
+
+.card-btn {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  background-color: #305E92;
+  border-radius: 43px;
+}
+
+
+.request-form {
+  color: white;
+}
+
+
+.btn-01 {
+  margin-top: 5%;
+}
+
+.btn-02 {
+  margin-top: 10%;
+}
+
+
+
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 991px) {
+  .card-image img {
+    display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .image-card img {
+    display: none;
+  }
+}
+

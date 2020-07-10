@@ -1,0 +1,146 @@
+<div class="body">
+ <!-- NAVBAR -->
+<div class="nav-bar" id="menu-site">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand logo-navbar p-2 " href="#"
+        ><img
+          src="/assets/logo/logo_web.png"
+          width="115"
+          class="logo-img d-inline-block align-top"
+          alt=""
+      /></a>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse menu-central p-2" id="navbarNav">
+          <ul class="navbar-nav menu-align" id="navbar">
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/como-funciona"
+                >COMO FUNCIONA</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ml-3" id="menu-font" routerLink="/cadastro"
+              >CADASTRE-SE</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+    <div class="row justify-content-center title mt-5">
+      <h1>Bem-vindo de volta!</h1>
+    </div>
+
+    <div class="row form-content justify-content-center">
+        <form
+          class="col-sm-8 col-md-8 col-lg-6 col-xl-6 "
+          action=""
+          method="post"
+          #form="ngForm"
+          (ngSubmit)="signin(form)"
+          novalidate
+        >
+          <div class="form-group">
+            <div class="btns-form">
+              <button
+                class="btn btn-lg btn-login-cliente"
+                routerLink="/login/cliente"
+              >
+                Sou Cliente
+              </button>
+              <button
+                class="btn btn-lg btn-login-prestador"
+                routerLink="/login/prestador"
+              >
+                Sou Prestador
+              </button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Endereço de email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+              name="email"
+              [(ngModel)]="user.email"
+              #email="ngModel"
+              required
+              email
+            />
+            <div class="error" *ngIf="form.submitted && email.invalid">
+              <p class="alert alert-danger" *ngIf="email.errors.required">
+                Este campo é requerido!
+              </p>
+              <p class="alert alert-danger" *ngIf="email.errors.email">
+                Email inválido!
+              </p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              [(ngModel)]="user.password"
+              #password="ngModel"
+              required
+              minlength="5"
+            />
+            <div class="error" *ngIf="form.submitted && password.invalid">
+              <p class="alert alert-danger" *ngIf="password.errors.required">
+                Este campo é requerido!
+              </p>
+              <p class="alert alert-danger" *ngIf="password.errors.minlength">
+                Mínimo 5 caracteres!
+              </p>
+            </div>
+          </div>
+
+          <div class="forgotpass d-flex justify-content-end">
+            <p><a href="">Esqueci minha senha!</a></p>
+          </div>
+          <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-md btn-entrar">Entrar</button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="row justify-content-center btn-cadastro">
+      <p>Não é cadastrado? <a href="">Crie uma conta</a></p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="section6">
+    <div class="row justify-content-center">
+      <div class="col-6 footer">
+        <p>Nome da plataforma Inc.</p>
+        <p>Informações de contato</p>
+        <p>SP, Brasil</p>
+      </div>
+    </div>
+  </div>
+</div>

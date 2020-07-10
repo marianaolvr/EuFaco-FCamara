@@ -1,0 +1,335 @@
+<div class="modal-content">
+  <div *ngIf="step1" id="step1">
+    <div class="modal-header">
+      <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Fechar"
+        (click)="onClose()"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body d-flex">
+      <div class="form-group">
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 50%;"
+            aria-valuenow="50"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <label for="requestDescription" class="labelFirstQuestion">
+          <strong>Fale sobre o serviço que você precisa</strong>
+          <br />
+          Dica: Quanto mais detalhes melhor para sua negociação
+        </label>
+        <textarea
+          class="form-control"
+          id="requestDescription"
+          rows="3"
+          name="description"
+          [(ngModel)]="budget.description"
+        ></textarea>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <!-- BOTAO PARA VOLTAR PARA A PAGINA EM QUE O USUARIO ESTAVA: BUSCA OU PERFIL DO PRESTADOR. É POSSÌVEL? -->
+      <button
+        type="button"
+        class="btn btn-back"
+        data-dismiss="modal"
+        (click)="onClose()"
+      >
+        Voltar
+      </button>
+      <button
+        type="button"
+        class="btn btn-next"
+        data-toggle="modal"
+        (click)="nextStep2()"
+      >
+        Prosseguir
+      </button>
+    </div>
+  </div>
+  <div id="step2" *ngIf="step2">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+          (click)="onClose()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ml-3 mr-3">
+        <div class="form-group serviceTypes">
+          <div class="progress">
+            <div
+              class="progress-bar"
+              role="progressbar"
+              style="width: 75%;"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></div>
+          </div>
+
+          <legend>Precisa do serviço presencial ou online?</legend>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="type_service"
+              [(ngModel)]="budget.type_service"
+              id="serviceType1"
+              value="Presencial"
+              checked
+            />
+            <label class="form-check-label" for="serviceType1">
+              Presencial (Profissional vem até mim)
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="type_service"
+              [(ngModel)]="budget.type_service"
+              id="serviceType2"
+              value="Online"
+            />
+            <label class="form-check-label" for="serviceType2">
+              Online (Profissional me auxilia por video chamada)
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group deadline">
+          <legend>Com urgência ou não há pressa?</legend>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="time"
+              [(ngModel)]="budget.time"
+              id="deadline1"
+              value="Com urgência"
+              checked
+            />
+            <label class="form-check-label" for="deadline1">
+              Com urgência!
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="time"
+              [(ngModel)]="budget.time"
+              id="deadline2"
+              value="Tem um prazo confortável até"
+            />
+            <label class="form-check-label" for="deadline2">
+              Tem um prazo confortável até
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-back" (click)="backStep1()">
+          Voltar
+        </button>
+        <button
+          type="button"
+          class="btn btn-next"
+          data-toggle="modal"
+          (click)="nextStep3()"
+        >
+          Prosseguir
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- FIM STEP2 -->
+  <div id="step3" *ngIf="step3">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+          (click)="onClose()"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body ml-3 mr-3 mb-2">
+        <div class="progress">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            style="width: 100%;"
+            aria-valuenow="100"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          ></div>
+        </div>
+
+        <legend class="register-title mx-auto">
+          Para concluirmos sua solicitação, faça seu cadastro rápido!
+        </legend>
+        <!-- FORMULARIO DE CADASTRO - JA COPIEI DA PAGINA DE CADASTRO -->
+        <form
+          action=""
+          method="POST"
+          id="form"
+          #form="ngForm"
+          (ngSubmit)="register(form)"
+          novalidate
+        >
+          <div class="form-group register-form">
+            <label for="name">Nome e Sobrenome</label>
+            <input
+              type="text"
+              class="form-control"
+              name="name"
+              [(ngModel)]="user.name"
+              #name="ngModel"
+              required
+            />
+            <div class="error" *ngIf="form.submitted && name.invalid">
+              <p class="alert alert-danger" *ngIf="name.errors.required">
+                Este campo é requerido!
+              </p>
+            </div>
+          </div>
+          <div class="form-group register-form">
+            <label for="email">Endereço de e-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              name="email"
+              [(ngModel)]="user.email"
+              #email="ngModel"
+              required
+              email
+            />
+            <div class="error" *ngIf="form.submitted && email.invalid">
+              <p class="alert alert-danger" *ngIf="email.errors.required">
+                Este campo é requerido!
+              </p>
+              <p class="alert alert-danger" *ngIf="email.errors.email">
+                Email inválido!
+              </p>
+            </div>
+          </div>
+          <div class="form-group register-form">
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              class="form-control"
+              name="cep"
+              [(ngModel)]="user.cep"
+              #cep="ngModel"
+              required
+            />
+            <div class="error" *ngIf="form.submitted && cep.invalid">
+              <p class="alert alert-danger" *ngIf="cep.errors.required">
+                Este campo é requerido!
+              </p>
+            </div>
+          </div>
+
+          <div class="form-row register-form">
+            <div class="col">
+              <label for="password">Crie uma senha</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                [(ngModel)]="user.password"
+                #password="ngModel"
+                required
+                minlength="5"
+              />
+              <div class="error" *ngIf="form.submitted && password.invalid">
+                <p class="alert alert-danger" *ngIf="password.errors.required">
+                  Este campo é requerido!
+                </p>
+                <p class="alert alert-danger" *ngIf="password.errors.minlength">
+                  Mínimo 5 caracteres!
+                </p>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-back" (click)="backStep2()">
+          Voltar
+        </button>
+        <!-- BOTAO PARA SUBMETER O CADASTRO -->
+        <button
+          type="submit"
+          class="btn btn-next"
+          form="form"
+          data-toggle="modal"
+        >
+          Prosseguir
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4 -->
+  <div *ngIf="step4" id="step4">
+    <div class="modal-content registerDone">
+      <div class="modal-header">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Fechar"
+          (click)="onClose()"
+        >
+          <span aria-hidden="true" style="color: white;">&times;</span>
+        </button>
+      </div>
+      <div class="confirmation-msg d-flex flex-column align-items-center">
+        <!-- COLOCAR LOGO -->
+        <img src="/assets/logo/logo_web.png" alt="" style="width: 20%;" />
+
+        <div class="modal-body ml-3 mr-3 contentReg">
+          <h2>Solicitação enviada com sucesso!</h2>
+          <p>
+            O prestador de serviços receberá sua solicitação e entrará em
+            contato através das "Mensagens" Lembre-se de obter todas as
+            informações necessárias para seu pedido antes de fechar com um dos
+            profissionais.
+          </p>
+        </div>
+
+        <!-- BOTAO PARA VOLTA PRA HOME LOGADO -->
+        <button
+          type="button"
+          class="btn btn-lg btn-done"
+          (click)="onCloseNavigate()"
+        >
+          Concluir
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

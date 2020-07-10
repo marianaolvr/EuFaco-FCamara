@@ -1,0 +1,25 @@
+.card-body {
+  width: 80%;
+}
+
+.card-text {
+  color: #707070;
+  font-weight: normal;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.card-s2 {
+  align-items: center;
+}
+
+.how-works {
+  align-items: baseline;
+}
+
+@media (max-width: 1106px) {
+  .card-s2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

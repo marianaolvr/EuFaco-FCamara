@@ -1,0 +1,34 @@
+.btn-search{
+  background-color: #FC4638;
+  color: white;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  border-radius: 43px;
+}
+
+.modal-header,
+.modal-footer {
+  border: none;
+}
+
+
+h2{
+  color: #FC4638;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+  text-align: center;
+}
+
+label {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+}
+

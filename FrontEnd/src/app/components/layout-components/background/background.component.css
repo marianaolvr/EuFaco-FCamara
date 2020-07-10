@@ -1,0 +1,14 @@
+.body {
+  background:
+  url("src/assets/Elements/elemento_azul.png"),
+  url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size:
+  28%,
+  33%;
+
+  background-position:
+  0% 3%,
+  top right;
+}

@@ -1,0 +1,162 @@
+.body {
+  background: url("src/assets/Elements/elemento_azul.png"),
+    url("src/assets/Elements/elemento_laranja-crop.png");
+  background-repeat: no-repeat;
+
+  background-size: 28%, 33%;
+
+  background-position: 0% 3%, top right;
+}
+
+a {
+  font-family: "Titillium Web", sans-serif;
+}
+
+p {
+  font-family: "Titillium Web", sans-serif;
+  color: #707070;
+}
+
+li {
+  list-style: none;
+}
+
+label {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  color: #707070;
+}
+
+/* navbar */
+#menu-site {
+  border-bottom: 1px solid #70707031;
+  background-color: #ffffff00;
+}
+
+#menu-font {
+  font-weight: bold;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.navbar-toggler {
+  color: #fc4638;
+  border: none;
+}
+
+@media (max-width: 990px) {
+  .right-element {
+    margin-left: auto;
+  }
+
+  .navbar-brand img {
+    content: url("/assets/logo/logo_mobile.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: 991px) {
+  .logo-navbar {
+    margin-right: auto;
+  }
+
+  .right-element {
+    margin-left: none;
+  }
+}
+/* FIM DO NAVBAR */
+
+/* form */
+
+h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  color: #305e92;
+  font-weight: bold;
+}
+
+h4 {
+  font-family: "Trebuchet MS", sans-serif;
+  color: #305e92;
+  font-weight: bold;
+  text-align: center;
+}
+
+.title {
+  margin-top: 5%;
+}
+
+form {
+  padding: 1% 5%;
+}
+
+.content-forms {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  padding: 2% 2%;
+  border: 1px solid #70707079;
+  box-shadow: 0px 10px 6px #00000014;
+  margin-top: 5%;
+  margin-bottom: 15%;
+  border-radius: 1%;
+}
+
+.nav-tabs {
+  border: none;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.register-btn {
+  margin-top: 5%;
+}
+
+.btn {
+  background: #fc4638 0% 0% no-repeat padding-box;
+  border-radius: 40px;
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+  margin-bottom: 5%;
+  font-weight: bold;
+}
+
+.contractor-item {
+  background-color: #fc4638;
+  border-radius: 40px;
+  font-family: "Titillium Web", sans-serif;
+  color: white;
+  margin-bottom: 5%;
+  padding: 1% 4%;
+  width: fit-content;
+}
+
+/* registerDone */
+
+.title-register-done {
+  margin-top: 1.5%;
+}
+
+.register-done {
+  height: 90vh;
+}
+
+h5 {
+  width: 70%;
+  color: #707070;
+  font-family: "Titillium Web", sans-serif;
+}
+
+.skip-btn {
+  border: none;
+  background-color: white;
+  text-decoration: underline;
+  color: #305e92;
+  font-weight: bold;
+  margin-right: 5%;
+}
+
+.skip-btn a {
+  color: #305e92;
+}
+
+.buttons-register {
+  margin-bottom: 3%;
+}

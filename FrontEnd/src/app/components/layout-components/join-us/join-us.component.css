@@ -1,0 +1,33 @@
+  .join-content h2, p {
+    color: #8B8A8A;
+  }
+
+  .join-content h2 {
+    letter-spacing: -0.51px;
+    font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .join-content p {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: normal;
+    text-align: center;
+
+  }
+
+  .join-content a {
+    text-decoration: none;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: bold;
+  }
+
+  .join-btn {
+    border-style: none;
+    border-radius: 55px;
+    width: fit-content;
+    padding: 3% 6%;
+    background-color: #FC4638;
+    margin-top: 5%;
+  }
